@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_app"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            style="@style/HeaderText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_app" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            style="@style/SubText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Games"
+            app:layout_constraintEnd_toEndOf="@+id/tv_app_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_app_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_app_name" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/SubText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="25-Apr-2020"
+            app:layout_constraintBottom_toTopOf="@+id/tv_price"
+            app:layout_constraintEnd_toStartOf="@+id/tv_price"
+            app:layout_constraintStart_toStartOf="@+id/tv_category"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/HeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="$50.25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_category"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
