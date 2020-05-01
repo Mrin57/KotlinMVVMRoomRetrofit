@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        title = "App Store"
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
         viewModel.showProgress.observe(this, Observer {
             if (it)
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         })
         rvApps.layoutManager = GridLayoutManager(this, 2, RecyclerView.VERTICAL, false)
         if (isConnected) {
+            viewModel.changeState()
             viewModel.makeApiCallToGetData()
             viewModel.serviceData.observe(this, Observer {
                 //rvApps.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)

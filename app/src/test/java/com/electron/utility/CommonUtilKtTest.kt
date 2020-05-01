@@ -10,4 +10,10 @@ class CommonUtilKtTest : TestCase() {
         val expected: String = "0.0"
         assertEquals(expected, roundToTwo(0.00f))
     }
+
+    @Test
+    fun testChangeDateFormat() {
+        val expected: String = "3 April, 2020"
+        assertEquals(expected, changeDateFormat("April 3, 2020"))
+    }
 }
